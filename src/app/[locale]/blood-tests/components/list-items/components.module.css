@@ -1,0 +1,18 @@
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+
+}
+
+.iconWrapper {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: var(--Sand, #F9F4EE);
+}

@@ -1,0 +1,37 @@
+.footer {
+    padding: 64px 0px;
+    background: #0B1B1B;
+    color: white;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactLink {
+    display: flex !important;
+    padding: 8px 0px;
+    gap: 8px;
+}

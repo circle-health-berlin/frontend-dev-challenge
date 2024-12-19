@@ -1,0 +1,15 @@
+.overviewContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 24px;
+    gap: 16px;
+}
+
+.intro {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+}
