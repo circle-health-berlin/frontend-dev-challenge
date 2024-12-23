@@ -19,6 +19,26 @@ const feedbacks = [
         rating: 5,
     },
     {
+        name: "John Doe",
+        text: "I noticed a significant improvement in my energy levels and overall well-being after the blood diagnostics.",
+        rating: 4,
+    },
+    {
+        name: "Jane Smith",
+        text: "The optional consultation provided excellent insights into my health metrics and areas to improve.",
+        rating: 5,
+    },
+    {
+        name: "Michael Brown",
+        text: "Quick results and very professional staff. Highly recommended!",
+        rating: 5,
+    },
+    {
+        name: "Jane Smith",
+        text: "The optional consultation provided excellent insights into my health metrics and areas to improve.",
+        rating: 5,
+    },
+    {
         name: "Michael Brown",
         text: "Quick results and very professional staff. Highly recommended!",
         rating: 5,
@@ -63,18 +83,14 @@ export const PatientFeedback = () => {
         return () => window.removeEventListener("resize", updateItemsPerSlide);
     }, []);
 
+    const totalSlides = Math.ceil(feedbacks.length / itemsPerSlide);
+
     const handleNext = () => {
-        setCurrentSlide(
-            (prev) => (prev + 1) % Math.ceil(feedbacks.length / itemsPerSlide)
-        );
+        setCurrentSlide((prev) => (prev + 1) % totalSlides);
     };
 
     const handlePrev = () => {
-        setCurrentSlide(
-            (prev) =>
-                (prev - 1 + Math.ceil(feedbacks.length / itemsPerSlide)) %
-                Math.ceil(feedbacks.length / itemsPerSlide)
-        );
+        setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
     };
 
     return (
@@ -105,13 +121,18 @@ export const PatientFeedback = () => {
                 <div
                     className="flex transition-transform duration-300"
                     style={{
-                        transform: `translateX(-${
-                            currentSlide * (100 / itemsPerSlide)
-                        }%)`,
+                        transform: `translateX(-${currentSlide * 100}%)`,
                     }}
                 >
                     {feedbacks.map((feedback, index) => (
-                        <FeedbackCard key={index} {...feedback} />
+                        <div
+                            key={index}
+                            style={{
+                                minWidth: `${100 / itemsPerSlide}%`,
+                            }}
+                        >
+                            <FeedbackCard {...feedback} />
+                        </div>
                     ))}
                 </div>
             </div>
