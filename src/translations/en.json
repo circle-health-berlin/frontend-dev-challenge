@@ -1,43 +1,47 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
-  },
-  "Footer": {
-    "Company": {
-      "name": "Circle Health Naturheilpraxis",
-      "address": "Giesebrechtstr. 20",
-      "city": "Berlin",
-      "zip": "10629",
-      "phone": {
-        "icon": "/icons/white/Phone.svg",
-        "label": "+49 (0)30 99 28 38 22",
-        "href": "tel:00493099283822"
-      },
-      "whatsapp": {
-        "icon": "/icons/white/WhatsappLogo.svg",
-        "label": "+49 15223058613",
-        "href": "https://wa.me/4915223058613"
-      },
-      "email": {
-        "icon": "/icons/white/EnvelopeSimple.svg",
-        "label": "praxis.charlottenburg@circle.health",
-        "href": "mailto:praxis.charlottenburg@circle.health"
-      }
+    "HomePage": {
+        "title": "Hello world!",
+        "about": "Go to the about page",
+        "noWaitingTime": "No waiting time",
+        "resultsIn1To2Weeks": "Results in 1 to 2 weeks",
+        "optionalConsultation": "Optional consultation",
+        "chooseYourBloodTest": "Choose your blood test"
     },
-    "Legal": {
-      "disclaimer": "All statements about properties, effects and indications of the procedures presented are based on experience of Circle Health. They do not necessarily correspond to the approaches of conventional medicine.",
-      "copyright": "© 2024 Circle Health Europe GmbH. All Rights Reserved.",
-      "links": {
-        "imprint": {
-          "text": "Imprint",
-          "url": "/imprint"
+    "Footer": {
+        "Company": {
+            "name": "Circle Health Naturheilpraxis",
+            "address": "Giesebrechtstr. 20",
+            "city": "Berlin",
+            "zip": "10629",
+            "phone": {
+                "icon": "/icons/white/Phone.svg",
+                "label": "+49 (0)30 99 28 38 22",
+                "href": "tel:00493099283822"
+            },
+            "whatsapp": {
+                "icon": "/icons/white/WhatsappLogo.svg",
+                "label": "+49 15223058613",
+                "href": "https://wa.me/4915223058613"
+            },
+            "email": {
+                "icon": "/icons/white/EnvelopeSimple.svg",
+                "label": "praxis.charlottenburg@circle.health",
+                "href": "mailto:praxis.charlottenburg@circle.health"
+            }
         },
-        "privacy": {
-          "text": "Privacy Policy",
-          "url": "/privacy"
+        "Legal": {
+            "disclaimer": "All statements about properties, effects and indications of the procedures presented are based on experience of Circle Health. They do not necessarily correspond to the approaches of conventional medicine.",
+            "copyright": "© 2024 Circle Health Europe GmbH. All Rights Reserved.",
+            "links": {
+                "imprint": {
+                    "text": "Imprint",
+                    "url": "/imprint"
+                },
+                "privacy": {
+                    "text": "Privacy Policy",
+                    "url": "/privacy"
+                }
+            }
         }
-      }
     }
-  }
 }
