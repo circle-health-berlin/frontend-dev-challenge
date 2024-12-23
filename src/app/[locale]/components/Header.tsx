@@ -11,7 +11,7 @@ export const Header = () => {
     const handleMenuToggle = () => setMenuOpen((prev) => !prev);
 
     return (
-        <header className="bg-white border-b">
+        <header className="fixed top-0 left-0 w-full z-50 bg-white border-b">
             <div className="hidden md:flex justify-between items-center px-4 py-2 text-sm bg-gray-100">
                 <div className="flex gap-4 items-center">
                     <a
