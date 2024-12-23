@@ -13,6 +13,8 @@ export const Header = () => {
     const handleMenuToggle = () => setMenuOpen((prev) => !prev);
 
     useEffect(() => {
+        if (typeof window === "undefined") return;
+
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
         };
@@ -80,10 +82,18 @@ export const Header = () => {
                 </div>
 
                 <div
-                    className={`bg-white px-4 flex justify-center items-center relative transition-all ${
+                    className={`bg-white px-4 flex justify-between items-center md:justify-center relative transition-all ${
                         isScrolled ? "py-2" : "py-4"
                     }`}
                 >
+                    <a
+                        href="#"
+                        className="flex items-center gap-1 hover:underline md:hidden"
+                    >
+                        <FaGlobe className="text-gray-600" />
+                        DE
+                    </a>
+
                     <img
                         src="/logo.png"
                         alt="Circle Health Logo"
@@ -91,10 +101,12 @@ export const Header = () => {
                             isScrolled ? "h-8" : "h-10"
                         }`}
                     />
-                    <button className="absolute right-4 hidden md:flex items-center gap-2 border border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white transition">
+
+                    <button className="hidden md:flex absolute right-4 items-center gap-2 border border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white transition">
                         <FaCalendarAlt className="text-lg" />
                         <span>Termin buchen</span>
                     </button>
+
                     <button
                         className="absolute right-4 md:hidden text-black"
                         onClick={handleMenuToggle}
@@ -145,6 +157,16 @@ export const Header = () => {
             </header>
 
             <div style={{ height: `${headerHeight}px` }} />
+
+            <section className="relative bg-gray-50 rounded-tl-lg rounded-tr-lg">
+                <div className="px-4 py-8">
+                    <p className="text-base text-gray-700">
+                        Wir entscheiden gemeinsam welche spezifischen Blutwerte
+                        analysiert werden, je nach individuellen Bedürfnissen
+                        und medizinischen Anforderungen.
+                    </p>
+                </div>
+            </section>
         </>
     );
 };
